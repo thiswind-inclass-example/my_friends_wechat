@@ -6,7 +6,7 @@ import itchat
 from jieba.analyse import extract_tags
 from pyecharts import options
 from pyecharts.charts import WordCloud
-from pyecharts.globals import SymbolType
+from pyecharts.globals import SymbolType, ThemeType, RenderType
 
 if __name__ == '__main__':
 
@@ -98,15 +98,31 @@ if __name__ == '__main__':
     # 创建词云
     print('创建词云...')
     title = f'{friend_list[0]["NickName"]}的朋友们的微信签名词云'
-    tag_word_cloud: WordCloud = WordCloud()
+
+    tag_word_cloud: WordCloud = WordCloud(
+        init_opts=options.InitOpts(
+            theme=ThemeType.ESSOS,
+            width='1400px',
+            height='800px',
+            page_title=title,
+
+        ),
+    )
+    tag_word_cloud.set_global_opts(
+        title_opts=options.TitleOpts(title=title),
+        toolbox_opts=options.ToolboxOpts(
+            is_show=True,
+            orient='vertical',
+        ),
+    )
+
     tag_word_cloud.add(
         '',
         words,
         word_size_range=[9, 60],
-        shape=SymbolType.DIAMOND
+        shape=SymbolType.RECT
     )
-    tag_word_cloud.set_global_opts(title_opts=options.TitleOpts(
-        title=title))
+
     tag_word_cloud.render(path=f'{title}.html')
 
     print('done')
