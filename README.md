@@ -15,4 +15,4 @@ python3 get_friends_signature_word_cloud.py # 生成词云
 
 微信签名词云样例：
 
-![](../assets/5ef124d9.png)
+![](assets/379a393d.png)
