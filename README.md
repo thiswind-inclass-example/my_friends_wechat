@@ -12,7 +12,3 @@ python3 get_friends_signature_word_cloud.py # 生成词云
 ```
 
 将生成相应的html文件
-
-微信签名词云样例：
-
-![](assets/379a393d.png)
