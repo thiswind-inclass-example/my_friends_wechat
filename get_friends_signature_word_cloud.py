@@ -94,6 +94,7 @@ if __name__ == '__main__':
 
     # 创建词云
     print('创建词云...')
+    title = f'{friend_list[0]["NickName"]}的朋友们的微信签名词云'
     tag_word_cloud: WordCloud = WordCloud()
     tag_word_cloud.add(
         '',
@@ -102,7 +103,7 @@ if __name__ == '__main__':
         shape=SymbolType.DIAMOND
     )
     tag_word_cloud.set_global_opts(title_opts=options.TitleOpts(
-        title=f'{friend_list[0]["NickName"]}的朋友们的微信签名'))
-    tag_word_cloud.render()
+        title=title))
+    tag_word_cloud.render(path=f'{title}.html')
 
     print('done')
