@@ -102,7 +102,7 @@ if __name__ == '__main__':
     tag_word_cloud: WordCloud = WordCloud(
         init_opts=options.InitOpts(
             theme=ThemeType.ESSOS,
-            width='1400px',
+            width='1500px',
             height='800px',
             page_title=title,
 
