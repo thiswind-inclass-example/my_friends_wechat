@@ -67,6 +67,8 @@ if __name__ == '__main__':
     print('从签名当中抽取关键词...')
     for sig in signature_list:
         tag_list: Iterator = extract_tags(sig)  # 抽取关键词
+
+        # 过滤不需要的词
         tag_list = filter(lambda x: len(str(x).strip()) > 0, tag_list)  # 过滤空词
         tag_list = filter(  # 过滤汉字、英文字母、数字之外的字符
             lambda x:
@@ -81,8 +83,9 @@ if __name__ == '__main__':
             ,
             tag_list
         )
-        tag_list = filter(lambda x: x not in ignore_word_list,
-                          tag_list)  # 过滤忽略的单词
+        tag_list = filter(lambda x: x not in ignore_word_list,tag_list)  # 过滤忽略的单词
+
+        # 把当前这条签名中过滤出来的关键词，添加到关键词列表当中
         all_tag_list += tag_list
 
     # 对关键词计数
