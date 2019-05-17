@@ -1,0 +1,5 @@
+venv
+itchat.pkl
+*.html
+*.json
+.idea
