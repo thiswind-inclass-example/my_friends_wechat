@@ -7,7 +7,8 @@
 运行：
 
 ```bash
-python get_friends_signature_word_cloud.py
+pip3 install --user -r requirements.txt # 安装依赖
+python3 get_friends_signature_word_cloud.py # 生成词云
 ```
 
 将生成相应的html文件
