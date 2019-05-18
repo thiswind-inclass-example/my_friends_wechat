@@ -16,4 +16,4 @@ python3 get_friends_signature_word_cloud.py # 生成词云
 
 ## 运行截图
 
-![](assets/9b3a9464.png)
+![](https://github.com/thiswind/my_friends_wechat/raw/master/assets/9b3a9464.png)
