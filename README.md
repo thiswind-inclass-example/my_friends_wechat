@@ -12,3 +12,8 @@ python3 get_friends_signature_word_cloud.py # 生成词云
 ```
 
 将生成相应的html文件
+
+
+## 运行截图
+
+![](assets/9b3a9464.png)
