@@ -102,8 +102,8 @@ if __name__ == '__main__':
     tag_word_cloud: WordCloud = WordCloud(
         init_opts=options.InitOpts(
             theme=ThemeType.ESSOS,
-            width='1500px',
-            height='800px',
+            width='800px',
+            height='600px',
             page_title=title,
 
         ),
@@ -112,14 +112,14 @@ if __name__ == '__main__':
         title_opts=options.TitleOpts(title=title),
         toolbox_opts=options.ToolboxOpts(
             is_show=True,
-            orient='vertical',
+            orient='horizontal',
         ),
     )
 
     tag_word_cloud.add(
         '',
         words,
-        word_size_range=[9, 60],
+        word_size_range=[10, 40],
         shape=SymbolType.RECT
     )
 
